@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Portfolio: Video</title>
+    <script>
+    // create a few global variables to be used later 
+    var video, speed, volume;
+    function init() { 
+      // initialize the player 
+      // first, get the media element and assign it to the video variable
+      video = document.getElementById('myvideo');
+      // get the current playbackRate from the HTML5 media API 
+      // range is 0 to very fast, with 1 being normal playback 
+      speed = video.playbackRate;   
+      // volume range is 0 to 1 
+      // set it in the middle so we have room to move it with our buttons      
+      volume = 0.5;
+      video.volume = volume; 
+      function play() {       
+      video.play(); 
+    }
+    function pause() {
+      video.pause();
+      function changeSpeed(direction) { 
+  // direction is either 'up' (faster) or 'down' (slower) 
+  if (direction == 'up') { 
+    if (speed < 10) { 
+      // increase playbackRate 
+      speed = speed + 0.1; 
+    }
+  }  
+  else if (direction == 'down') { 
+    if (speed > 0) {
+      // decrease playbackRate
+      speed = speed - 0.1; 
+    }
+  }
+  // so far all we've done is change the value of our speed variable 
+  // not let's assign it to the player 
+  video.playbackRate = speed;           
+}
+function changeVolume(direction) { 
+  if (direction == 'up') { 
+    // if not fully cranked yet, increase volume 
+    if (volume < 0.9) {
+      volume = volume + 0.1; 
+    }
+  }  
+  else if (direction == 'down') { 
+    // if not muted, decrease volume
+    if (volume > 0.1) {  
+      volume = volume - 0.1; 
+    }
+  }       
+  // so far all we've done is change the value of our volume variable 
+  // not let's assign it to the player 
+  video.volume = volume;            
+} 
+// wait until the web page has finished loading, then run the init function
+window.onload = init;
+
+  </script>
+    <link rel="shortcut icon" href="_assets/images/favicon.png">
+    <meta charset="utf-8">
+    <title>Web Portfolio: Video</title>
+    <link type="text/css" rel="stylesheet" href="_assets/css/mystyle.css" media="screen">
+  </head>
+  <body>
+<center><img src="_assets/images/banner.png"></center><br>
+    <div id="skipnav">
+      <a href="#main">Skip to main content</a>
+    </div>
+
+    <h1>Web Video</h1>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+      <li><a href="usability.html">Usability</a></li>
+      <li><a href="graphics.html">Graphics</a></li>
+      <li><a href="js.html">Javascript</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="videos.html">Videos</a></li>
+    </ul>
+  </nav>
+
+  <main id="overview">
+    <p>This video is about people and their experiences with code. The purpose of it is to convince viewers to start writing code to make a better future.</p>
+    <h1>CTE Video PSA</h1>
+    <p>To promote career and technical education, the Dabbaronies created this video to express the environment and heart of our program areas. Our main message is to "Celebrate today. Own tomorrow!"</p>
+    <center><video controls poster="_assets/video/project/project_ss.jpg" preload="auto" width="320" height="240" controls>
+      <source src="_assets/video/project/Dabbaronies_Acting_PSA_Contest.mp4" type="video/mp4"></source>
+        <source src="_assets/video/project/Dabbaronies_Acting_PSA_Contest.webm" type="video/webm"></source>
+        </video></center>
+        <div id="myplayer">
+          <button onclick="play()">Play</button>
+          <button onclick="pause()">Pause</button>
+          <button onclick="changeSpeed('up')">Faster</button>
+          <button onclick="changeSpeed('down')">Slower</button>
+          <button onclick="changeVolume('up')">Louder</button>
+          <button onclick="changeVolume('down')">Softer</button>
+</div>    
+  </body>
+</html>
+</div>    
+
+  </main>
+
+  </body>
+</html>
