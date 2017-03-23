@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+    function toggleClock() { 
+    // get the clock 
+    var myClock = document.getElementById('clock');
+
+    // get the current value of the clock's display property 
+    var displaySetting = myClock.style.display;
+
+    // also get the clock button, so we can change what it says 
+    var clockButton = document.getElementById('clockButton');
+        
+    // now toggle the clock and the button text, depending on current state
+    if (displaySetting == 'block') { 
+      // clock is visible. hide it
+      myClock.style.display = 'none';
+      // change button text
+      clockButton.innerHTML = 'Show clock';
+    }
+    else { 
+      // clock is hidden. show it 
+      myClock.style.display = 'block';
+      // change button text
+      clockButton.innerHTML = 'Hide clock';
+    }
+  }  
+  function showAlert() { 
+    var myText = "BUY 'GOING SEVENTEEN' ON ITUNES.";
+    alert (myText);
+  }
+  function updateTime() { 
+
+    // get all parts of the current time
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    // add leading zero's to minutes and seconds
+  if (minutes < 10) { 
+    minutes = '0' + minutes;
+  }
+  if (seconds < 10) { 
+    seconds = '0' + seconds;
+  }       
+
+  // get time of day (am or pm) 
+  if (hours >= 12 && hours < 24) { 
+    var timeOfDay = 'pm';
+  }
+  else { 
+    var timeOfDay = 'am'; 
+  }
+        
+  // convert hours from 24-hour time to 12-hour time
+  if (hours > 12) { 
+    hours = hours - 12;
+  }
+
+    // splice them together into a character string named "currentTime"
+    var currentTime = hours + ':' + minutes + ':' + seconds + '  ' + timeOfDay;  
+    
+    // get the clock div 
+    var myClock = document.getElementById('clock');
+    
+    // write the currentTime string to the clock div
+    myClock.innerHTML = currentTime;
+
+    function() {
+      "use strict";
+  }
+
+  function estimateTotal(event) {
+  event.preventDefault();
+  
+  if (state.value === '') {
+    alert('Please choose your shipping state.');
+    
+    state.focus();
+  }
+  
+  var itemBball = parseInt(document.getElementById('txt-q-carat')
+               .value, 10) || 0,
+    itemJersey = parseInt(document.getElementById('txt-q-bts')
+               .value, 10) || 0,
+    itemPower = parseInt(document.getElementById('txt-q-exo')
+               .value, 10) || 0,
+    itemWater = parseInt(document.getElementById('txt-q-ahgasae')
+               .value, 10) || 0,
+    shippingState = state.value,
+    shippingMethod = document.querySelector('[name=r_method]:checked')
+                 .value || "";
+    
+  var totalQty = itemCarat + itemBts + itemExo + itemAhgasae,
+    shippingCostPer,
+    shippingCost,
+    taxFactor = 1,
+    estimate,
+    totalItemPrice = (35 * itemCarat) + (40 * itemBts) +
+             (45 * itemExo) + (35 * itemAhgasae);
+  
+  if (shippingState === 'SWCTA') {
+    taxFactor = 1.075;
+  } else if (shippingState === 'DOHS') {
+    taxFactor = 1.065;
+  }
+  
+  switch(shippingMethod) {
+    case 'usps' :
+      shippingCostPer = 2;
+      break;
+    case 'ups' :
+      shippingCostPer = 3;
+      break;
+    default :
+      shippingCostPer = 0;
+      break;
+  }
+  
+  shippingCost = shippingCostPer * totalQty;
+    
+  estimate = '$' + ((totalItemPrice * taxFactor) + shippingCost).toFixed(2);
+  
+  document.getElementById('txt-estimate').value = estimate;
+  
+  var results = document.getElementById('results');
+  
+  results.innerHTML = 'Total items: ' + totalQty + '<br>';
+  results.innerHTML += 'Total shipping: $' + shippingCost.toFixed(2) + '<br>';
+  results.innerHTML += 'Tax: ' + ((taxFactor - 1) * 100).toFixed(2) + '% (' + shippingState + ')';
+}
+
+})();
+  </script>
+    <link rel="shortcut icon" href="_assets/images/favicon.png">
+    <meta charset="utf-8">
+    <title>Web Portfolio: Shareen Basyari</title>
+    <link type="text/css" rel="stylesheet" href="_assets/css/mystyle.css" media="screen">
+  </head>
+  
+  <body onload="setInterval('updateTime()',1000)">
+    <button onclick="toggleClock()" id="clockButton">Show clock</button>
+<center><img src="_assets/images/banner.png"></center><br>
+    <div id="skipnav">
+      <a href="#main">Skip to main cont ent</a>
+    </div>
+
+    <h1>Web Portfolio: Javascript</h1>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+      <li><a href="usability.html">Usability</a></li>
+      <li><a href="graphics.html">Graphics</a></li>
+      <li><a href="js.html">Javascript</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="videos.html">Videos</a></li>
+    </ul>
+  </nav>
+
+  <div id="clock"></div>
+
+<div class="content">
+    <div class="post-content section-inner">
+      <section class="main-content">
+                <form class="cart" id="cart-hplus">
+                <div class="item">
+                    <h2>SEVENTEEN Carat Bong</h2>
+                    <p><center><img src="_assets/images/carat.jpg"></p>Rose Quartz 'n' Serenity
+                      <br></center>
+                    <div class="info">
+                    <span>Price: $35/lightstick</span>
+                    </div>
+        
+                    <div class="order">
+                    <label for="txt-q-carat">Quantity:</label>
+                    <input type="number" min="0" id="txt-q-carat" size="3" placeholder="0">
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <h2>BANGTAN Bomb</h2>
+                    <p><center><img src="_assets/images/bts.jpg"></p>Black</center>
+                    <br>
+                    <div class="info">
+                    <span>Price: $40/lightstick</span>
+                    </div>
+        
+                    <div class="order">
+                    <label for="txt-q-bts">Quantity:</label>
+                    <input type="number" min="0" id="txt-q-bts" size="3" placeholder="0">
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <h2>EXO Lightstick</h2>
+                    <p><center><img src="_assets/images/exo.jpg"></p>Black or white</center>
+                    <br>
+                    <div class="info">
+                    <span>Price: $45/lightstick</span>
+                    </div>
+        
+                    <div class="order">
+                    <label for="txt-q-exo">Quantity:</label>
+                    <input type="number" min="0" id="txt-q-exo" size="3" placeholder="0">
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <h2>GOT7 Ahgasae</h2>
+                    <p><center><img src="_assets/images/ahgasae.png"></p>Green</center>
+                    <br>
+                    <div class="info">
+                    <span>Price: $35/lightstick</span>
+                    </div>
+        
+                    <div class="order">
+                    <label for="txt-q-ahgasae">Quantity:</label>
+                    <input type="number" min="0" id="txt-q-ahgasae" size="3" placeholder="0">
+                    </div>
+                </div>
+    
+                <div id="summary">
+                    <h2>Checkout</h2>
+                    
+                    <div class="group school">
+                        <label for="s-school">School (required):</label>
+                        <select id="s-school" required>
+                            <option value="">- select -</option>
+                            <option value="SWCTA">Southwest Career and Tech (7.5% tax)</option>
+                            <option value="DOHS">Desert Oasis (6.5% tax)</option>
+                            <option value="CHS">Clark</option>
+                            <option value="SVHS">Sierra Vista</option>
+                            <option value="DHS">Durango</option>
+                        </select>
+                    </div>
+        
+                    <div class="group method">
+                        <label for="r-method-pickup">Shipping and Handling:</label><br>
+                        <input type="radio" value="pickup" name="r_method" id="r-method-pickup" checked> <label for="r-method-pickup">Pickup (free)</label><br>
+            
+                        <input type="radio" value="usps" name="r_method" id="r-method-usps"> <label for="r-method-usps">US Mail ($2/item)</label><br>
+            
+                        <input type="radio" value="ups" name="r_method" id="r-method-ups"> <label for="r-method-ups">UPS ($3/item)</label>
+                    </div>
+        
+                    <div class="group special">
+                        <label for="c-special-gift">How did you find out about us?</label><br>
+                        <input type="checkbox" value="YES" name="c-special-gift" id="c-special-gift"> <label for="c-special-gift">Friend</label><br>
+            
+                        <input type="checkbox" value="YES" name="c-special-email" id="c-special-email"> <label for="c-special-email">Ad</label><br>
+            
+                        <input type="checkbox" value="YES" name="c-special-recipes" id="c-special-recipes"> <label for="c-special-recipes">Other</label>
+                    </div>
+        
+                    <div class="group notes">
+                        <label for="txt-notes">Other:</label><br>
+                        
+                        <textarea name="txt-notes" id="txt-notes" rows="2" placeholder="If you chose other, please explain."></textarea>
+                    </div>
+        
+                    <div class="group calc">
+                        <p>
+                        <label for="btn-estimate">Total:</label><br>
+                        <input type="submit" value="Estimate" id="btn-estimate">
+                        <input type="text" id="txt-estimate" placeholder="$0.00">
+                        </p>
+            
+                        <div id="results"></div>
+                    </div>
+                </div>
+        
+                </form>
+      </section>
+      <div class="clear"></div>
+    </div>
+  </div>
+
+
+
+  </body>
+</html>
