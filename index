@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="_assets/images/favicon.png">
+    <meta charset="utf-8">
+    <title>Web Portfolio: Shareen Basyari</title>
+    <link type="text/css" rel="stylesheet" href="_assets/css/mystyle.css" media="screen">
+  </head>
+  <body>
+<img src="_assets/images/banner.png" alt=""><br>
+    <div id="skipnav">
+      <a href="#main">Skip to main content</a>
+    </div>
+
+    <h1>Web Portfolio</h1>
+
+    <div class="info">
+      <ul>
+        <li>Shareen Basyari</li>
+        <li>
+    <a href="mailto:shareen.62095@nv.ccsd.net"><img src="_assets/images/mail-icon.png" height="25" width="25" alt="">My Email</a></li>
+      </ul>
+	 </div>  
+
+  <div class="info">
+    <ul>
+        <li>Web Design Development 1</li>
+        <li>Ms. Cindi Chang </li>
+        <li><a href="http://swcta.net/">Southwest Career and Technical Academy</a></li>
+        <li>2016-2017</li>
+      </ul>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+      <li><a href="usability.html">Usability</a></li>
+      <li><a href="graphics.html">Graphics</a></li>
+      <li><a href="javascript.html">Javascript</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="video.html">Videos</a></li>
+    </ul>
+  </nav>
+
+  <main id="overview">
+
+  <h2>Unit 1</h2>
+  <p><img src="http://dailydropcap.com/images/A-5-cap.png" title="Daily Drop Cap by Jessica Hische" align="left" alt="A"/>s you go through this section, it will include links to my work for this unit, once completed.</p>
+
+  <h2>Unit 2</h2>
+  <p class="temp"><b>Reflection: </b>In this unit, we learned the basics of coding – the content that the viewers visit for. Without design and graphics, we set up the plain, infomational things, like tables, ordered and unordered lists, headings, attributes and linking. We also learned the importance of coding for people with disabilities. Towards the end of this unit, we spent about one to two weeks on a PSA video on CTE programs with our guilds, presented them, then added the videos to our websites. Now the class understands the purpose of coding and how to do it.</p>
+  <b>What I Found Informative:</b>
+  <ul>
+    <li>Coding the websites to fit the needs of those who are disabled</li>
+    <li>Creating tables to sort information</li>
+    <li>Knowing where the information can be seen on the site and what cannot be seen (code)</li>
+  </ul>
+
+  <h2>Unit 3</h2>
+  <p class="temp"><b>Reflection:</b> In this unit, we covered the properties of CSS coding. CSS, alternatively known as Cascading Style Sheets, gives the page an extra kick to make it visually appealing and format it. We learned how to use CSS selector types, such as changing colors and fonts. In addition to that, we went over static, relative, absolute and fixed positioning, then compared and contrasted them to understand how they defined themselves. At the end, we stylized and layed out the page as a class, thus making our pages look better.</p>
+  <b>What I found informative</b>
+  <ul>
+    <li>Learning page layout techniques to give my page a format to follow and be more organized</li>
+    <li>Knowing how use ID's and class</li>
+    <li>Applying box models in CSS</li>
+  </ul>
+
+  <h2>Unit 4</h2>
+  <p class="temp">This unit focused on the visual aspect of websites. We created buttons to make our pages more interesing and easier to navigate through, and we also designed our own web banners to place at the top of our index page. As we did these activities, we gradually understood the purpose of having a banner, like what information should be included and what <i>shouldn't</i> be on them. We were aso able to apply out knowledge of Photoshop and Illustrator, then learned the difference between PNG, JPEG and GIF.</p>
+  <b>What I found informative</b>
+  <ul>
+    <li>Knowing the differnce between file types (PNG, JPEG, GIF)</li>
+    <li>Understand the purpose of banners and buttons</li>
+    <li>Why using graphics on a website is useful</li>
+  </ul>
+
+  <h2>Unit 5</h2>
+  <p class="temp">Throghout this unit, we learned how to apply Javascript in our web pages and what it is used for. Javascript is the programmng language of HTML and the Web, and it allows coders to cretae pop-up messages and even clocks. We learned the differences between variables, functions, onload attributes, and events. Javascript is very specific, meaning one mistake in just spelling or capitalization can mess up the entre web page.</p>
+
+  <h2>Unit 6</h2>
+  <p class="temp">Unit 6 focused on validating websites and ensuring that they function correctly. Validating HTML and CSS corrects invalid code and gives feedback, which is helpful to coders as they create their websites. Furthermore, we had people test the functionality of our websites, provide feedback, and give suggestions on what they wish could be improved otr added.</p>
+  <b>What I found informative:</b>
+  <ul>
+    <li>Finding many alternatives to fixing a website</li>
+    <li>Using validation sites to point out errors</li>
+    <li>Usability testing</li>
+  </ul>
+
+  <h2>Unit 7</h2>
+  <p class="temp">This section will inclued links to my work for this unit, once completed.</p>
+
+  </main>
+
+  </body>
+</html>
